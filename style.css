@@ -118,10 +118,11 @@ button{
 
 .attribution { 
     font-size: 11px; text-align: center;
-    bottom: 0;
+    bottom: 5px;
     position: fixed;
     width: 90%;
     text-align: center;
+    color:#fff;
 }
 .attribution a { color: hsl(228, 45%, 44%); }
 
