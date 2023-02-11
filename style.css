@@ -116,7 +116,13 @@ button{
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { 
+    font-size: 11px; text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 90%;
+    text-align: center;
+}
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media screen and (max-width:475px){
