@@ -1,24 +1,21 @@
-const ratingContainer = document.querySelector('.rating__container');
-const thanksContainer = document.querySelector('.thanks__container');
-const submitButton = document.getElementById('submit');
-const rateAgain = document.getElementById('rate-again');
-const rates = document.querySelectorAll('.btn');
-const rating = document.querySelector('.rating');
+const mainDisplay = document.querySelector('.rating__container');
+const thankYou = document.querySelector('.thanks__container');
+const form = document.querySelector('.rating__btn');
+const userSelection = document.querySelector('.final-rate');
+const rateAgain = document.querySelector('#rate-again');
 
-submitButton.addEventListener('click', function(){
 
-    thanksContainer.classList.remove('hidden');
-    ratingContainer.style.display = 'none';
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const rating = form.rating.value;
+
+    userSelection.textContent = `You selected ${rating} out of 5`;
+    mainDisplay.classList.add('hidden');
+    thankYou.classList.remove('hidden');
 })
 
-rateAgain.addEventListener('click', function(){
 
-    thanksContainer.classList.add('hidden');
-    ratingContainer.style.display = 'block';
-})
-
-rates.forEach( function(rate){
-    rate.addEventListener('click', function(){
-        rating.innerHTML = rate.innerHTML;
-    })
+rateAgain.addEventListener('click', () => {
+    mainDisplay.classList.remove('hidden');
+    thankYou.classList.add('hidden');
 })

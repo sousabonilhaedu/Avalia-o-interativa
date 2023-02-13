@@ -19,31 +19,37 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: hsl(216, 12%, 8%) ;
+    background-color: hsl(216, 12%, 8%);
+
 }
 
 button{
     font: inherit;
 }
+input[type="radio"]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+}
 
-.rating__container, 
+.rating__container,
 .thanks__container{
+
     background-color: hsl(213, 19%, 18%);
     padding: 1.5rem;
-    border-radius: 30px;
-    margin: 0 1rem;
-    width: 50%;
+    border-radius: 0.625rem;
+    width: 60%;
     margin: 0 auto;
 }
 
-.rate-img{
-    background-color: hsl(212, 18%, 21%);
-    padding: 0.8rem;
+.star-img{
+    background-color: hsl(211, 19%, 26%);
+    padding: 0.6rem;
     border-radius: 50%;
 }
 
 .titulo{
-    font-size: 24px;
+    font-size: 25px;
     font-weight: 700;
     color: #fff;
     margin: 2rem 0 1rem;
@@ -52,50 +58,53 @@ button{
 .text{
     color: hsl(217, 12%, 63%);
     line-height: 1.8;
-    margin-bottom: 1rem;
 }
 
-.main__container ul{
+.rate-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    text-align: center;
 }
 
-.btn{
-    background-color:hsl(212, 18%, 21%) ;
-    padding: 1.5rem 1.5rem 1.3rem;
-    text-align: center;
+.rating-number{
+    padding: 1.5rem 1.5rem 1.3rem 1.5rem;
+    background-color: hsl(211, 19%, 26%);
     border-radius: 50%;
-    margin-bottom: 1rem;
-    color: hsl(216, 12%, 54%) ;
+    color: hsl(216, 12%, 54%);
+    margin: 1rem 0;
     transition: 0.3s;
 }
 
+.um{
+    padding: 1.5rem 1.58rem 1.3rem 1.58rem;
+}
+
 .submit-btn{
-    background-color: hsl(25, 97%, 53%);
-    padding: 0.9rem 0.9rem 0.7rem;
     width: 100%;
+    padding: 0.8em 0.8em 0.6em 0.8em;
     border-radius: 30px;
     border-style: none;
     text-transform: uppercase;
     color: #fff;
+    background-color: hsl(25, 97%, 53%);
     transition: 0.3s;
+    margin-top: 1rem;
+}
+
+.rating-number:hover{
+    background-color: hsl(216, 12%, 54%);
+    color: hsl(213, 19%, 18%);
+}
+.rating-number:active{
+    background-color: hsl(25, 97%, 53%);
+    color: #fff;
 }
 
 .submit-btn:hover{
     background-color: #fff;
-    color:hsl(25, 97%, 53%);
-}
-
-.btn:hover{
-    color: #fff;
-    background-color: hsl(25, 97%, 53%);
-}
-
-.btn:active{
-    background-color:hsl(216, 12%, 54%);
-    color: #fff;
+    color: hsl(25, 97%, 53%);
 }
 
 .thanks__container{
@@ -103,48 +112,26 @@ button{
 }
 
 .final-rate{
-    background-color: hsl(212, 18%, 21%);
-    padding: 0.8rem 0.8rem 0.6rem;
-    border-radius: 30px;
     color: hsl(25, 97%, 53%);
+    background-color: hsl(211, 19%, 26%);
+    padding: 0.6em 0.6em 0.4em 0.6em;
+    border-radius: 30px;
     width: 40%;
     margin: 1rem auto;
 }
 
 .hidden{
-    display: none;
+    display: none
 }
-
-
-.attribution { 
-    font-size: 11px; text-align: center;
-    bottom: 5px;
-    position: fixed;
-    width: 90%;
+footer{
     text-align: center;
-    color:#fff;
+    position: fixed;
+    bottom: 5px;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: #fff;
+
 }
 .attribution a { color: hsl(228, 45%, 44%); }
-
-@media screen and (max-width:475px){
-    
-    
-    .main__container{
-        width: 100%;
-        margin: 0 10px;
-    }
-
-    .rating__container,
-    .thanks__container{
-        width: 80vw;
-    }
-
-    .btn{
-        padding: 1rem 1rem 0.8rem;
-    }
-
-    .final-rate{
-        width: 60%;
-    }
-
-}

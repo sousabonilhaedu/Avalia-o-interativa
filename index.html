@@ -16,51 +16,73 @@
 <body>
 
   <!-- Rating state start -->
-  <div class="main__container">
-    
-    <div class="rating__container">
+  <main class="principal">
+    <section class="main__container">
       
-      <img src="./images/icon-star.svg" alt="star" class="rate-img">
-      <h1 class="titulo">How did we do?</h1>
+      <div class="rating__container">
+        
+        <img src="./images/icon-star.svg" alt="star" class="star-img">
+        <h2 class="titulo">How did we do?</h2>
 
-     <p class="text"> Please let us know how we did with your support request. All feedback is appreciated 
-      to help us improve our offering!</p>
+      <p class="text"> Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p>
 
-      <ul>
-        <li class="btn">1</li>
-        <li class="btn">2</li>
-        <li class="btn">3</li>
-        <li class="btn">4</li>
-        <li class="btn">5</li>
-      </ul>
-      
-      <button class="submit-btn" id="submit">Submit</button> 
+        <form class="rating__btn">
+          <fieldset class="rate-container">
+            <legend class="hidden">Please, select your rating</legend>
+            <div class="rate-container">
+              <input type="radio" name="rating" class="ratings" id="um" value="1">
+              <label for="um" class="rating-number um">1</label>
+            </div>
+            <div class="rate-container">
+              <input type="radio" name="rating" class="ratings" id="dois" value="2">
+              <label for="dois" class="rating-number">2</label>
+            </div>
+            <div class="rate-container">
+              <input type="radio" name="rating" class="ratings" id="tres" value="3">
+              <label for="tres" class="rating-number">3</label>
+            </div>
+            <div class="rate-container">
+              <input type="radio" name="rating" class="ratings" id="quatro" value="4">
+              <label for="quatro" class="rating-number">4</label>
+            </div>
+            <div class="rate-container">
+              <input type="radio" name="rating" class="ratings" id="cinco" value="5">
+              <label for="cinco" class="rating-number">5</label>
+            </div>
+          </fieldset>
 
-  </div>
-    <!-- Rating state end -->
+          <button class="submit-btn" id="submit" type="submit">Submit</button> 
+        </form>
 
-    <!-- Thank you state start -->
-    <div class="thanks__container hidden">
-      <img src="./images/illustration-thank-you.svg" alt="thank-you" class="thank-you_img">
-      
-      <p class="final-rate">You selected <span class="rating"></span><!-- Add rating here --> out of 5</p> 
+        
 
-      <h1 class="titulo">Thank you!</h1>
-
-      <p class="text">We appreciate you taking the time to give a rating. If you ever need more support, 
-        don’t hesitate to get in touch!</p>
-
-      <button class="submit-btn" id="rate-again">Rate again</button>
     </div>
-  </div>
-  <!-- Thank you state end -->
+      <!-- Rating state end -->
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/sousabonilhaedu" target="_blank">Sousabonilhaedu</a>.
-  </div>
+      <!-- Thank you state start -->
+      <div class="thanks__container hidden ">
+        <img src="./images/illustration-thank-you.svg" alt="thank-you" class="thank-you_img">
+        
+        <p class="final-rate">You selected <span class="rating" id="rating">-</span><!-- Add rating here --> out of 5</p> 
 
+        <h2 class="titulo">Thank you!</h2>
+
+        <p class="text">We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!</p>
+
+        <button class="submit-btn" id="rate-again">Rate again</button>
+      </div>
+    </section>
+    <!-- Thank you state end -->
+
+  </main>
+  <footer>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/sousabonilhaedu" target="_blank">Sousabonilhaedu</a>.
+    </div>
+  </footer> 
   <script src="./main.js"></script>
 </body>
 </html>
