@@ -135,3 +135,20 @@ footer{
 
 }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 470px) {
+
+    .rating__container,
+    .thanks__container{
+        width: 87vw;
+        margin: 0 auto;
+    }
+
+    .rating-number{
+        padding: 1.3rem 1.3rem 1.1rem 1.3rem;
+    }
+
+    .final-rate{
+        width: 50%;
+    }
+}
